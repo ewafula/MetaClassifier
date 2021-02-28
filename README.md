@@ -39,7 +39,7 @@ conda create -n "metaclassifier" -c bioconda metaclassifier=1.0.0
 ### Marker reference databases
 [MetaCurator](https://github.com/RTRichar/MetaCurator) reference databases with taxonomy lineage information reformated to work with MetaClassifier. 
 Detailed step by step tutorial workflow for creating reference marker database is descrribe on the GitHub [MetaCurator database repository](https://github.com/RTRichar/MetabarcodeDBsV2/blob/master/Workflow.md)
-* [MetabarcodeDBsV2](http://bigdata.bx.psu.edu/MetaClassifier_databases/MetabarcodeDBsV2.tar.gz)
+* [MetabarcodeDBs](http://bigdata.bx.psu.edu/MetaClassifier_databases/)
 
 ## Basic usage
 For detailed description consult the MetaClassifier [manual](docs/MetaClassifier.md)
@@ -50,9 +50,9 @@ metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
 ## Citation
 If you use MetaClassifier please cite the following paper the describes the methodology:
 
-**Characterizing the floral resources of a North American metropolis using a honey bee foraging assay**  
-_Douglas B. Sponsler_, _Don Shump_,  _Rodney T. Richardson_,  _Christina M. Grozinger_  
-Ecosphere 11, no. 4 (2020): e03102   
+**Characterizing the floral resources of a North American metropolis using a honey bee foraging assay.**  
+_Douglas B. Sponsler_, _Don Shump_,  _Rodney T. Richardson_,  _Christina M. Grozinger_.  
+Ecosphere 11, no. 4 (2020): e03102.   
 DOI: [https://doi.org/10.1002/ecs2.3102](https://doi.org/10.1002/ecs2.3102)
 
 
