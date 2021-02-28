@@ -48,11 +48,13 @@ metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
 `````
 
 ## Citation
-If you used MetaClassifier please cite the following paper:
+If you use MetaClassifier please cite the following paper the describes the methodology:
 
 **Characterizing the floral resources of a North American metropolis using a honey bee foraging assay**
-_Douglas B. Sponsler_, _Don Shump_,  _Rodney T. Richardson_,  _Christina M. Grozinger_ 
+_Douglas B. Sponsler_, _Don Shump_,  _Rodney T. Richardson_,  _Christina M. Grozinger_
+
 Ecosphere 11, no. 4 (2020): e03102 
+
 DOI: [https://doi.org/10.1002/ecs2.3102](https://doi.org/10.1002/ecs2.3102)
 
 
