@@ -1,5 +1,5 @@
 # MetaClassifier
-MetaClassifier is an integrated pipeline for identifying the floral composition of honey using DNA metabarcoding to determine the plants that honey bees visit. MetaClassifier utilizes a database of marker sequences and their corresponding taxonomy information to classify high-throughput metabarcoding sample sequencing reads data into taxonomic groups and quantify taxon abundance. MetaClassifier can also be employed in other studies that utilize barcoding, metabarcoding, and metagenomics techniques to characterize richness, abundance, relatedness, and interactions in ecological communities.
+MetaClassifier is an integrated pipeline for identifying the floral composition of honey using DNA metabarcoding to determine the plants that honey bees visit. MetaClassifier utilizes a database of marker sequences and their corresponding taxonomy lineage information to classify high-throughput metabarcoding sample sequencing reads data into taxonomic groups and quantify taxon abundance. MetaClassifier can also be employed in other studies that utilize barcoding, metabarcoding, and metagenomics techniques to characterize richness, abundance, relatedness, and interactions in ecological communities.
 
 In addition to this README file, you can consult the MetaClassifier [manual](docs/MetaClassifier.md) for more detailed information.
 
@@ -23,7 +23,7 @@ pip install metaclassifier
 ```
 ### Repository from GitHub
 ```
-git clone https://github.com/ewafula/MetaClassifier.git
+Either "git clone https://github.com/ewafula/MetaClassifier.git" or download and "unzip MetaClassifier-main.zip"
 cd MetaClassifier/
 python setup.py install
 ```
@@ -36,6 +36,26 @@ We recommend installing MetaClassifier in a new separate environment from the ba
 ```
 conda create -n "metaclassifier" -c bioconda metaclassifier=1.0.0
 ```
+### Marker reference databases
+[MetaCurator](https://github.com/RTRichar/MetaCurator) reference databases with taxonomy lineage information reformated to work with MetaClassifier. 
+Detailed step by step tutorial workflow for creating reference marker database is descrribe on the GitHub [MetaCurator database repository](https://github.com/RTRichar/MetabarcodeDBsV2/blob/master/Workflow.md)
+* [MetabarcodeDBsV2](http://bigdata.bx.psu.edu/MetaClassifier_databases/MetabarcodeDBsV2.tar.gz)
+
+## Basic usage
+For detailed description consult the MetaClassifier [manual](docs/MetaClassifier.md)
+```
+metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
+`````
+
+## Citation
+If you used MetaClassifier please cite the following paper:
+
+**Characterizing the floral resources of a North American metropolis using a honey bee foraging assay**
+_Douglas B. Sponsler_, _Don Shump_,  _Rodney T. Richardson_,  _Christina M. Grozinger_ 
+Ecosphere 11, no. 4 (2020): e03102 
+DOI: [https://doi.org/10.1002/ecs2.3102](https://doi.org/10.1002/ecs2.3102)
+
+
 
 
 
