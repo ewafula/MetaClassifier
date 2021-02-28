@@ -42,7 +42,7 @@ Detailed step by step tutorial workflow for creating reference marker database i
 * [MetabarcodeDBs](http://bigdata.bx.psu.edu/MetaClassifier_databases/)
 
 ## Basic usage
-For detailed description consult the MetaClassifier [manual](docs/MetaClassifier.md)
+For detailed description of optional and positional arguments consult the MetaClassifier [manual](docs/MetaClassifier.md)
 ```
 metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
 `````
