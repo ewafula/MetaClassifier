@@ -90,13 +90,13 @@ As an example, this section uses the a small test dataset subsampled from the sa
 
 **Analysis steps**:
 - Get into the [test](../test) directory of MetaClassifier:
-  -`cd MetaClassifier/test/`
+  - `cd MetaClassifier/test/`
 - Unpack the `sample1` and `sample2` test paired-end (PE) read files:
-  -`gzip -d *.gz`  
+  - `gzip -d *.gz`  
 - Download and unpack the [MetaCurator reference database](http://bigdata.bx.psu.edu/MetaClassifier_databases/) in the [db](../db) directory of MetaClassifier:
-  -`wget -qO- http://bigdata.bx.psu.edu/MetaClassifier_databases/MetabarcodeDBsV2.tar.gz | tar -xvz -C ../db/`
+  - `wget -qO- http://bigdata.bx.psu.edu/MetaClassifier_databases/MetabarcodeDBsV2.tar.gz | tar -xvz -C ../db/`
 - Execute the `metaclassifier.py` wrapper script with defaults for optional arguments and allowing PE reads merging:
-  -`python ../metaclassifier.py -m -r ../bin/pear -s ../bin/seqtk -a ../bin/vsearch sample_input.tsv ../db/MetabarcodeDBsV2 sample_config.tsv`
+  - `python ../metaclassifier.py -m -r ../bin/pear -s ../bin/seqtk -a ../bin/vsearch sample_input.tsv ../db/MetabarcodeDBsV2 sample_config.tsv`
 
 **Run log**:
 ```
