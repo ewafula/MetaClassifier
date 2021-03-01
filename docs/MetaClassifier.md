@@ -88,7 +88,7 @@ Where:
 ## MetaClassifier output
 As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sonpsler et al., 2020](##-citation) study to show how to perform an complete analysis using wrapper script. The test datasets are located in the [test](../test) sub-directory of MetaClassifier installation. 
 
-**Analysis steps**:
+**Analysis**:
 - Get into the [test](../test) directory of MetaClassifier:
   - `cd MetaClassifier/test/`
 - Unpack the `sample1` and `sample2` test paired-end (PE) read files:
