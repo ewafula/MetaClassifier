@@ -50,7 +50,7 @@ Detailed step by step tutorial workflow for creating reference marker database i
     ```
   - Basic usage with defaults for optional arguments:
     ```
-    python3 metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
+    python3 -m metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
     ```
 - **MetaClassifier pipeline wrapper script**: 
   - Display all usage options: 
@@ -68,7 +68,7 @@ Detailed step by step tutorial workflow for creating reference marker database i
     ```
   - Basic usage with defaults for optional arguments:
     ```
-    python3 MetaClassifierfor /metaclassifier/process_reads.py [options] <SAMPLE_FILE>
+    python3 MetaClassifier/metaclassifier/process_reads.py [options] <SAMPLE_FILE>
     ```
 - **MetaClassifier read classification script**: 
   - Display all usage options: 
