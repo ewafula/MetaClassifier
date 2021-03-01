@@ -42,43 +42,10 @@ conda create -n "metaclassifier" -c bioconda metaclassifier=1.0.0
 Detailed step by step tutorial workflow for creating reference marker database is descrribe on the GitHub [MetaCurator database repository](https://github.com/RTRichar/MetabarcodeDBsV2/blob/master/Workflow.md)
 * [MetabarcodeDBs](http://bigdata.bx.psu.edu/MetaClassifier_databases/)
 
-## Using MetaClassifier
-- **MetaClassifier pipeline package**: 
-  - Display all usage options: 
-    ```
-    python3 -m metaclassifier -h
-    ```
-  - Basic usage with defaults for optional arguments:
-    ```
-    python3 -m metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
-    ```
-- **MetaClassifier pipeline wrapper script**: 
-  - Display all usage options: 
-    ```
-    python3 MetaClassifier/metaclassifier.py -h
-    ```
-  - Basic usage with defaults for optional arguments:
-    ```
-    python3 MetaClassifier/metaclassifier.py [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
-    ```
-- **MetaClassifier read processing script**: 
-  - Display all usage options: 
-    ```
-    python3 MetaClassifier/metaclassifier/process_reads.py -h
-    ```
-  - Basic usage with defaults for optional arguments:
-    ```
-    python3 MetaClassifier/metaclassifier/process_reads.py [options] <SAMPLE_FILE>
-    ```
-- **MetaClassifier read classification script**: 
-  - Display all usage options: 
-    ```
-    python3 MetaClassifier/metaclassifier/classify_reads.py -h
-    ```
-  - Basic usage with defaults for optional arguments:
-    ```
-    python3 MetaClassifier/metaclassifier/classify_reads.py [options] <FASTA_DIR> <DB_DIR> <CONFIG_FILE>
-    ```
+## Basic usage
+```
+metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
+```
 
 Please consult the MetaClassifier [manual](docs/MetaClassifier.md) and [tutorial](docs/Tutorial.md) for a detailed description and usage of all options.
 
