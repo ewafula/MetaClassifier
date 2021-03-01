@@ -86,9 +86,18 @@ Where:
 * `<FASTA_DIR>` is the directory containing samples read data fasta files produced by either the MetaClassifier's `process_reads.py` script or from external sources for classification by the MetaClassifier's `classify_reads.py` script. 
 
 ## MetaClassifier output
+As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sonpsler et al., 2020](##-citation) study to show how to perform an complete analysis using wrapper script. The test datasets are located in the [test](../test) sub-directory of MetaClassifier installation. 
+**Analysis steps**:
+- Get into the [test](../test) directory of MetaClassifier
+  -`cd MetaClassifier/test/`
+- Unpack the `sample1` and `sample2` test paired-end (PE) read files
+  -`gzip -d *.gz  
+- Download and unpack the [MetaCurator reference database](http://bigdata.bx.psu.edu/MetaClassifier_databases/) in the [db](../db) directory of MetaClassifier
+  -`wget -qO- http://bigdata.bx.psu.edu/MetaClassifier_databases/MetabarcodeDBsV2.tar.gz | tar -xvz -C ../db/`
+- Execute the `metaclassifier.py` wrapper script with defaults for optional arguments and allowing PE reads merging
 `python ../metaclassifier.py -m -r ../bin/pear -s ../bin/seqtk -a ../bin/vsearch sample_input.tsv ../db/MetabarcodeDBsV2 sample_config.tsv`
 
-run log:
+**Run log**:
 ```
 ===========================================================
 MetaClassifier version 1.0.0 (release date: 05 March 2021)
@@ -126,6 +135,9 @@ MetaClassifier version 1.0.0 (release date: 05 March 2021)
 Total elapsed time 708
 ```
 
+**Outputs**:
+```
+```
 
 ## Citation
 If you use MetaClassifier please cite the following paper the describes the methodology:
