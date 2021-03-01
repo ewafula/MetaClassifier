@@ -92,8 +92,3 @@ DOI: [https://doi.org/10.1002/ecs2.3102](https://doi.org/10.1002/ecs2.3102)
 
 ## License
 MetaClassifier is distributed under the GNU GPL v3.0 For more information, see [license](LICENSE).
-
-
-
-
-
