@@ -9,7 +9,7 @@ MetaClassifier requires dependencies and external tools that need to be installe
 
 ### Dependecies
 
-* [Python](https://www.python.org/) (version >=3.6)
+* [Python](https://www.python.org/) (version >=3.7)
 * [pandas](https://pandas.pydata.org/) (version >=1.2.2)
 
 ### External tools
