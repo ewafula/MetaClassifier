@@ -79,6 +79,11 @@ Detailed step by step tutorial workflow for creating reference marker database i
     ```
     python3 MetaClassifier/metaclassifier/classify_reads.py [options] <FASTA_DIR> <DB_DIR> <CONFIG_FILE>
     ```
+Where:
+* `<SAMPLE_FILE>` is the input tab-delimited file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example file is avible here](test/example_sample_input.tsv)
+* `<FASTA_DIR>` is the name of the database of markers to use, a [detailed description is available here](#databases)
+* `<DB_DIR>` is the path to the configuration file necessary to properly run PhyloPhlAn 3.0, a [detailed description is available here](#configuration-file)
+* `<CONFIG_FILE>` is the path to the configuration file necessary to properly run PhyloPhlAn 3.0, a [detailed description is available here](#configuration-file)
 
 Please consult the MetaClassifier [manual](docs/MetaClassifier.md) and [tutorial](docs/Tutorial.md) for a detailed description and usage of all options.
 
