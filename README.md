@@ -37,16 +37,35 @@ We recommend installing MetaClassifier in a new separate environment from the ba
 ```
 conda create -n "metaclassifier" -c bioconda metaclassifier=1.0.0
 ```
-### Marker reference databases
+## Marker reference databases
 [MetaCurator](https://github.com/RTRichar/MetaCurator) reference databases with taxonomy lineage information reformated to work with MetaClassifier. 
 Detailed step by step tutorial workflow for creating reference marker database is descrribe on the GitHub [MetaCurator database repository](https://github.com/RTRichar/MetabarcodeDBsV2/blob/master/Workflow.md)
 * [MetabarcodeDBs](http://bigdata.bx.psu.edu/MetaClassifier_databases/)
 
-## Basic usage
+## Using PlantTribes
 For detailed description of optional and positional arguments consult the MetaClassifier [manual](docs/MetaClassifier.md)
-```
-metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
-`````
+- **MetaClassifier pipeline package**: 
+  - Display all usage options: 
+    - `python3 -m metaclassifier -h`
+  - Basic usage with default optional arguments:
+    - `python3 metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>`
+- **MetaClassifier pipeline wraper script**: 
+  - Display all usage options: 
+    - `python3 MetaClassifier/metaclassifier.py -h`
+  - Basic usage with default optional arguments:
+    - `python3 MetaClassifier/metaclassifier.py [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>`
+  - **MetaClassifier read processing script**: 
+  - Display all usage options: 
+    - `python3 MetaClassifier/metaclassifier/process_reads.py -h`
+  - Basic usage with default optional arguments:
+    - `python3 MetaClassifier/metaclassifier/process_reads.py [options] <SAMPLE_FILE>`
+  - **MetaClassifier read classification script**: 
+  - Display all usage options: 
+    - `python3 MetaClassifier/metaclassifier/classify_reads.py -h`
+  - Basic usage with default optional arguments:
+    - `python3 MetaClassifier/metaclassifier/classify_reads.py [options] <FASTA_DIR> <DB_DIR> <CONFIG_FILE>`
+
+Please consult the MetaClassifier [manual](docs/MetaClassifier.md) and [tutorial](docs/Tutorial.md) for a detailed description and usage of all options.
 
 ## Citation
 If you use MetaClassifier please cite the following paper the describes the methodology:
@@ -55,6 +74,9 @@ If you use MetaClassifier please cite the following paper the describes the meth
 _Douglas B. Sponsler_, _Don Shump_,  _Rodney T. Richardson_,  _Christina M. Grozinger_.  
 Ecosphere 11, no. 4 (2020): e03102.   
 DOI: [https://doi.org/10.1002/ecs2.3102](https://doi.org/10.1002/ecs2.3102)
+
+## License
+MetaClassifier is distributed under the GNU GPL v3.0 For more information, see [license](LICENSE).
 
 
 
