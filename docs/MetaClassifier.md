@@ -81,9 +81,9 @@ Detailed step by step tutorial workflow for creating reference marker database i
     ```
 Where:
 * `<SAMPLE_FILE>` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](test/example_sample_input.tsv).
-* `<FASTA_DIR>` is the name of the database of markers to use, a [detailed description is available here](#databases)
-* `<DB_DIR>` is the path to the configuration file necessary to properly run PhyloPhlAn 3.0, a [detailed description is available here](#configuration-file)
+* `<DB_DIR>` Input marker database directory with sequence fasta and corresponding taxonomy lineage files for each marker. Marker data files should be named with marker nomenclature followed `.fa` for the fasta sequence file and `.tax` for the taxonomy lineage file. (i.e., `ITS1.fa` and `ITS1.tax` for the first internal transcribed spacer in eukaryotic ribosomal RNA subunit genes). The marker taxonomy lineage files should formated as a tab-separated file with 1) the NCBI taxon ID,  2) order name, 3) family name, 4) genus name, and 4) species name as show [MetaCurator reformated reference database](http://bigdata.bx.psu.edu/MetaClassifier_databases/).
 * `<CONFIG_FILE>` is the path to the configuration file necessary to properly run PhyloPhlAn 3.0, a [detailed description is available here](#configuration-file)
+* `<FASTA_DIR>` is the path to the configuration file necessary to properly run PhyloPhlAn 3.0, a [detailed description is available here](#configuration-file)
 
 Please consult the MetaClassifier [manual](docs/MetaClassifier.md) and [tutorial](docs/Tutorial.md) for a detailed description and usage of all options.
 
