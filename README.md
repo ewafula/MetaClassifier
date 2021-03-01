@@ -61,10 +61,12 @@ For detailed description of optional and positional arguments consult the MetaCl
     - `python3 MetaClassifier/metaclassifier/process_reads.py [options] <SAMPLE_FILE>`
 - **MetaClassifier read classification script**: 
   - Display all usage options: 
-    - `python3 MetaClassifier/metaclassifier/classify_reads.py -h`
+    ```
+    python3 MetaClassifier/metaclassifier/classify_reads.py -h
+    ```
   - Basic usage with default optional arguments:
     ```
-    - python3 MetaClassifier/metaclassifier/classify_reads.py [options] <FASTA_DIR> <DB_DIR> <CONFIG_FILE>
+    python3 MetaClassifier/metaclassifier/classify_reads.py [options] <FASTA_DIR> <DB_DIR> <CONFIG_FILE>
     ```
 
 Please consult the MetaClassifier [manual](docs/MetaClassifier.md) and [tutorial](docs/Tutorial.md) for a detailed description and usage of all options.
