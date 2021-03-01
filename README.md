@@ -43,28 +43,39 @@ Detailed step by step tutorial workflow for creating reference marker database i
 * [MetabarcodeDBs](http://bigdata.bx.psu.edu/MetaClassifier_databases/)
 
 ## Using MetaClassifier
-For detailed description of optional and positional arguments consult the MetaClassifier [manual](docs/MetaClassifier.md)
 - **MetaClassifier pipeline package**: 
   - Display all usage options: 
-    - `python3 -m metaclassifier -h`
-  - Basic usage with default optional arguments:
-    - `python3 metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>`
+    ```
+    python3 -m metaclassifier -h
+    ```
+  - Basic usage with defaults for optional arguments:
+    ```
+    python3 metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
+    ```
 - **MetaClassifier pipeline wraper script**: 
   - Display all usage options: 
-    - `python3 MetaClassifier/metaclassifier.py -h`
-  - Basic usage with default optional arguments:
-    - `python3 MetaClassifier/metaclassifier.py [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>`
+    ```
+    python3 MetaClassifier/metaclassifier.py -h
+    ```
+  - Basic usage with defaults for optional arguments:
+    ```
+    python3 MetaClassifier/metaclassifier.py [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
+    ```
 - **MetaClassifier read processing script**: 
   - Display all usage options: 
-    - `python3 MetaClassifier/metaclassifier/process_reads.py -h`
-  - Basic usage with default optional arguments:
-    - `python3 MetaClassifier/metaclassifier/process_reads.py [options] <SAMPLE_FILE>`
+    ```
+    python3 MetaClassifier/metaclassifier/process_reads.py -h
+    ```
+  - Basic usage with defaults for optional arguments:
+    ```
+    python3 MetaClassifierfor /metaclassifier/process_reads.py [options] <SAMPLE_FILE>
+    ```
 - **MetaClassifier read classification script**: 
   - Display all usage options: 
     ```
     python3 MetaClassifier/metaclassifier/classify_reads.py -h
     ```
-  - Basic usage with default optional arguments:
+  - Basic usage with defaults for optional arguments:
     ```
     python3 MetaClassifier/metaclassifier/classify_reads.py [options] <FASTA_DIR> <DB_DIR> <CONFIG_FILE>
     ```
