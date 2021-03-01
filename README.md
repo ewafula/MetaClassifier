@@ -52,7 +52,7 @@ Detailed step by step tutorial workflow for creating reference marker database i
     ```
     python3 metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
     ```
-- **MetaClassifier pipeline wraper script**: 
+- **MetaClassifier pipeline wrapper script**: 
   - Display all usage options: 
     ```
     python3 MetaClassifier/metaclassifier.py -h
