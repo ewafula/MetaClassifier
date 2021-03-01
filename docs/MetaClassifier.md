@@ -2,7 +2,7 @@
 ## Overview
 MetaClassifier is an integrated pipeline for identifying the floral composition of honey using DNA metabarcoding to determine the plants that honey bees visit. MetaClassifier utilizes a database of marker sequences and their corresponding taxonomy lineage information to classify high-throughput metabarcoding sample sequencing reads data into taxonomic groups and quantify taxon abundance. MetaClassifier can also be employed in other studies that utilize barcoding, metabarcoding, and metagenomics techniques to characterize richness, abundance, relatedness, and interactions in ecological communities.
 
-In addition to this README file, you can consult the MetaClassifier [manual](docs/MetaClassifier.md) for more detailed information.
+In addition to this README file, you can consult the MetaClassifier [manual](../docs/MetaClassifier.md) for more detailed information.
 
 ## Installation
 MetaClassifier requires dependencies and external tools that need to be installed and available on the environment the pipeline can be used. Not a requirement if insatalling using Bioconda.
@@ -80,13 +80,13 @@ Detailed step by step tutorial workflow for creating reference marker database i
     python3 MetaClassifier/metaclassifier/classify_reads.py [options] <FASTA_DIR> <DB_DIR> <CONFIG_FILE>
     ```
 Where:
-* `<SAMPLE_FILE>` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](test/mv sample_input.tsv).
+* `<SAMPLE_FILE>` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
 * `<DB_DIR>` is the input marker database directory with sequence fasta files and corresponding taxonomy lineage files for each marker. Marker data files should be named with marker nomenclature followed `.fa` for the fasta sequence file and `.tax` for the taxonomy lineage file. (i.e., `ITS1.fa` and `ITS1.tax` for the first internal transcribed spacer in eukaryotic ribosomal RNA subunit genes). The marker taxonomy lineage files should formated as a tab-separated file with 1) the NCBI taxon ID,  2) order name, 3) family name, 4) genus name, and 5) species name as shown in the MetaClassifier's [MetaCurator reformated reference database](http://bigdata.bx.psu.edu/MetaClassifier_databases/).
-* `<CONFIG_FILE>` is the input tab-separated file specifying marker name `(i.e., ITS1)` and its corresponding VSEARCH's usearch_global function search settings of minimum query coverage `(i.e., 0.8 for 80)` and minimum sequence identity `(i.e., 0.95 for 95%)` for each search marker. [Example sample input file is available here](test/sample_config.tsv).
+* `<CONFIG_FILE>` is the input tab-separated file specifying marker name `(i.e., ITS1)` and its corresponding VSEARCH's usearch_global function search settings of minimum query coverage `(i.e., 0.8 for 80)` and minimum sequence identity `(i.e., 0.95 for 95%)` for each search marker. [Example sample input file is available here](../test/sample_config.tsv).
 * `<FASTA_DIR>` is the directory containing samples read data fasta files produced by either the MetaClassifier's `process_reads.py` script or from external sources for classification by the MetaClassifier's `classify_reads.py` script. 
 
 ## MetaClassifier output
-As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sonpsler et al., 2020](##-citation) study to show how to perform an complete analysis using wrapper script. The test datasets are located in the [test](../test) sub-directory of MetaClassifier installation. 
+As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sonpsler et al., 2020](#-citation) study to show how to perform an complete analysis using wrapper script. The test datasets are located in the [test](../test) sub-directory of MetaClassifier installation.   
 **Analysis steps**:
 - Get into the [test](../test) directory of MetaClassifier
   -`cd MetaClassifier/test/`
