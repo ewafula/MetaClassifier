@@ -47,7 +47,7 @@ Detailed step by step tutorial workflow for creating reference marker database i
 metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
 ```
 
-Please consult the MetaClassifier [manual](docs/MetaClassifier.md) and [tutorial](docs/Tutorial.md) for a detailed description and usage of all options.
+Please consult the MetaClassifier [manual](docs/MetaClassifier.md) for a detailed description and usage of all options.
 
 ## Citation
 If you use MetaClassifier please cite the following paper the describes the methodology:
