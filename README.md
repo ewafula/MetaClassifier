@@ -42,7 +42,7 @@ conda create -n "metaclassifier" -c bioconda metaclassifier=1.0.0
 Detailed step by step tutorial workflow for creating reference marker database is descrribe on the GitHub [MetaCurator database repository](https://github.com/RTRichar/MetabarcodeDBsV2/blob/master/Workflow.md)
 * [MetabarcodeDBs](http://bigdata.bx.psu.edu/MetaClassifier_databases/)
 
-## Using PlantTribes
+## Using MetaClassifier
 For detailed description of optional and positional arguments consult the MetaClassifier [manual](docs/MetaClassifier.md)
 - **MetaClassifier pipeline package**: 
   - Display all usage options: 
@@ -54,12 +54,12 @@ For detailed description of optional and positional arguments consult the MetaCl
     - `python3 MetaClassifier/metaclassifier.py -h`
   - Basic usage with default optional arguments:
     - `python3 MetaClassifier/metaclassifier.py [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>`
-  - **MetaClassifier read processing script**: 
+- **MetaClassifier read processing script**: 
   - Display all usage options: 
     - `python3 MetaClassifier/metaclassifier/process_reads.py -h`
   - Basic usage with default optional arguments:
     - `python3 MetaClassifier/metaclassifier/process_reads.py [options] <SAMPLE_FILE>`
-  - **MetaClassifier read classification script**: 
+- **MetaClassifier read classification script**: 
   - Display all usage options: 
     - `python3 MetaClassifier/metaclassifier/classify_reads.py -h`
   - Basic usage with default optional arguments:
