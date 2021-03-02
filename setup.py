@@ -10,7 +10,7 @@ README = (setup_dir / "README.md").read_text()
 
 setup(
     name="metaclassifier",
-    version="1.0.0",
+    version="1.0.1",
     description="MetaClassifier is an integrated pipeline for classifying and quantifying DNA metabarcoding data into taxonomy groups",
     long_description=README,
     long_description_content_type="text/markdown",
