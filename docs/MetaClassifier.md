@@ -138,6 +138,7 @@ Total elapsed time 708
 
 **Outputs**:
 ```
+All of the output will be in the `sample_input` directory, the sample input file if the desiired output name was not provided by `-o` option. If running the complete pipeline using the `metaclassifier.py` wrapper script as shown above, the contents of this output directory is as follows:
 sample_input/
 ├── merge_dir/
 |           ├── sample1_pear.log
@@ -153,24 +154,25 @@ sample_input/
 ├── fasta_dir/
 |           ├── sample1.fasta
 |           └── sample2.fasta
-├── sample1
+├── sample1/
 |         ├── ITS1_vsearch.log
 |         ├── ITS1_blast6out.tsv
 |         ├── ITS2_vsearch.log 
 |         ├── ITS2_blast6out.tsv
 |         ├── trnL_vsearch.log
 |         ├── trnL_blast6out.tsv
-|         └── <sample1_rescaled_propotions.tsv>
-├── sample2
+|         └── sample1_rescaled_propotions.tsv
+├── sample2/
 |         ├── ITS1_vsearch.log
 |         ├── ITS1_blast6out.tsv
 |         ├── ITS2_vsearch.log 
 |         ├── ITS2_blast6out.tsv
 |         ├── trnL_vsearch.log
 |         ├── trnL_blast6out.tsv
-|         └── <sample2_rescaled_propotions.tsv>
+|         └── sample2_rescaled_propotions.tsv
 └── sample.tsv
 ```
+Where: 
 
 ## Citation
 If you use MetaClassifier please cite the following paper the describes the methodology:
