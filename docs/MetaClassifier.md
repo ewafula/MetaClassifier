@@ -86,7 +86,7 @@ Where:
 * `<FASTA_DIR>` is the directory containing samples read data fasta files produced by either the MetaClassifier's `process_reads.py` script or from external sources for classification by the MetaClassifier's `classify_reads.py` script. 
 
 ## MetaClassifier output
-As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sonpsler et al., 2020](##-citation) study to show how to perform an complete analysis using wrapper script. The test datasets are located in the [test](../test) sub-directory of MetaClassifier installation. 
+As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sonpsler et al., 2020](#citation) study to show how to perform an complete analysis using wrapper script. The test datasets are located in the [test](../test) sub-directory of MetaClassifier installation. 
 
 **Analysis**:
 - Get into the [test](../test) directory of MetaClassifier:
