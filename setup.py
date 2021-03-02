@@ -30,7 +30,7 @@ setup(
         "console_scripts": [
             "metaclassifier=metaclassifier.__main__:main",
             "process_reads=metaclassifier.process_reads.py:main",
-            "classify_reads.py=metaclassifier.classify_reads.py:main"
+            "classify_reads=metaclassifier.classify_reads.py:main"
         ],
     },
     zip_safe=True
