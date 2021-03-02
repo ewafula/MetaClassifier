@@ -17,9 +17,9 @@ setup(
     url="https://github.com/ewafula/MetaClassifier",
     author='Eric Wafula',
     author_email="ekw10@gmail.com",
-    license="GNU General Public License v3.0",
+    license="license="GNU General Public License v3 (GPLv3)",
     classifiers=[
-        "License :: OSI Approved :: GNU General Public License v3.0",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
     ],
