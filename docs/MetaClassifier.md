@@ -137,8 +137,8 @@ Total elapsed time 708
 ```
 
 **Outputs**:
-```
 All of the output will be in the `sample_input` directory, the sample input file if the desiired output name was not provided by `-o` option. If running the complete pipeline using the `metaclassifier.py` wrapper script as shown above, the contents of this output directory is as follows:
+```
 sample_input/
 ├── merge_dir/
 |           ├── sample1_pear.log
