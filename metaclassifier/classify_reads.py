@@ -11,7 +11,7 @@ datasets, identifying sample taxonomic composition, and quantifying taxon read a
 """
 
 __author__ = ('Eric Wafula (ewafula@gmail.com)')
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __date__ = '05 March 2021'
 
 
