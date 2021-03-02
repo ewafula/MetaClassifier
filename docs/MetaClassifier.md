@@ -83,7 +83,7 @@ Where:
 * `<SAMPLE_FILE>` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
 * `<DB_DIR>` is the input marker database directory with sequence fasta files and corresponding taxonomy lineage files for each marker. Marker data files should be named with marker nomenclature followed `.fa` for the fasta sequence file and `.tax` for the taxonomy lineage file. (i.e., `ITS1.fa` and `ITS1.tax` for the first internal transcribed spacer in eukaryotic ribosomal RNA subunit genes). The marker taxonomy lineage files should formated as a tab-separated file with 1) the NCBI taxon ID,  2) order name, 3) family name, 4) genus name, and 5) species name as shown in the MetaClassifier's [MetaCurator reformated reference database](http://bigdata.bx.psu.edu/MetaClassifier_databases/).
 * `<CONFIG_FILE>` is the input tab-separated file specifying marker name `(i.e., ITS1)` and its corresponding VSEARCH's usearch_global function search settings of minimum query coverage `(i.e., 0.8 for 80)` and minimum sequence identity `(i.e., 0.95 for 95%)` for each search marker. [Example sample input file is available here](../test/sample_config.tsv).
-* `<FASTA_DIR>` is the directory containing samples read data fasta files produced by either the MetaClassifier's `process_reads.py` script or from external sources for classification by the MetaClassifier's `classify_reads.py` script. 
+* `<FASTA_DIR>` is the directory containing sample read data fasta files produced by either the MetaClassifier's `process_reads.py` script or from external sources for classification by the MetaClassifier's `classify_reads.py` script. 
 
 ## MetaClassifier output
 As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sponsler et al., 2020](#citation) study to show how to perform an complete analysis using wrapper script. The test datasets and [external tools](#external-tools) Linux binaries are located in the [test](../test) and [bin](../bin) sub-directory of MetaClassifier installation respectively. 
@@ -138,7 +138,7 @@ Total elapsed time 708
 
 **Outputs**:
 
-All of the output will be in the `sample_input/` output directory, named after the sample input file name if an alternative output name was not provided by the `-o` option. If running the complete pipeline using the `metaclassifier.py` wrapper script as shown above, the contents of the output directory is as follows:
+All of the output will be in the `sample_input/` output directory, named after the sample input file name if an alternative output name is not provided by the `-o` option. If running the complete pipeline using the `metaclassifier.py` wrapper script as shown above, the contents of the output directory is as follows:
 ```
 sample_input/
 ├── merge_dir/
@@ -175,10 +175,9 @@ sample_input/
 ```
 Where:  
 * **`merge_dir/`**: this output sub-directory contains results of the sample paired-end (PE) read merging process, including `*_pear.log`: the PEAR merger run logs, `*.assembled.fastq`: the merged overlapping PE reads, `*.discarded.fastq`: discarded erroneous reads, `*.unassembled.forward.fastq`: unmerged forward fragments of PE reads, and `*.unassembled.reverse.fastq`: unmerged reverse fragments of PE reads. 
-* `fasta_dir/` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
-* `/sample1/` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
-* `/sample2/` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
-* `sample.tsv` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
+* **`fasta_dir/`**: this output sub-directory contains the merged overlapping PE reads samples read data FASTA files converted from FASTQ format. This out directory be used as an input of the `classify_reads.py` script for reruns to optimize classification parameters.
+* **`/sample1/2/`** this output sub-directory contains results of the each sample's paired-end read classification process, including `*_vsearch.log`: the reference marker VSEARCH run logs, `*_blast6out.tsv`: the reference marker VSEARCH search results, and `*_rescaled_propotions.tsv`: the identified sample taxonomic composition and taxon read abundance propotions. 
+* **`sample.tsv`** this a recreated by the sample input file for paired-end merged sample read files.
 
 ## Citation
 If you use MetaClassifier please cite the following paper the describes the methodology:
