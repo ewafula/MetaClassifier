@@ -160,7 +160,7 @@ sample_input/
 |         ├── ITS2_blast6out.tsv
 |         ├── trnL_vsearch.log
 |         ├── trnL_blast6out.tsv
-|         └── **sample1_rescaled_propotions.tsv**
+|         └── <sample1_rescaled_propotions.tsv>
 ├── sample2
 |         ├── ITS1_vsearch.log
 |         ├── ITS1_blast6out.tsv
@@ -168,7 +168,7 @@ sample_input/
 |         ├── ITS2_blast6out.tsv
 |         ├── trnL_vsearch.log
 |         ├── trnL_blast6out.tsv
-|         └── **sample2_rescaled_propotions.tsv**
+|         └── <sample2_rescaled_propotions.tsv>
 └── sample.tsv
 ```
 
