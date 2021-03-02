@@ -35,7 +35,7 @@ conda install -c bioconda metaclassifier
 ```
 We recommend installing MetaClassifier in a new separate environment from the base for all dependencies to be properly resolved by conda. To install, type:
 ```
-conda create -n "metaclassifier" -c bioconda metaclassifier=1.0.0
+conda create -n "metaclassifier" -c bioconda metaclassifier=1.0.1
 ```
 ## Marker reference databases
 [MetaCurator](https://github.com/RTRichar/MetaCurator) reference databases with taxonomy lineage information reformated to work with MetaClassifier. 
@@ -103,7 +103,7 @@ As an example, this section uses the a small test dataset subsampled from the sa
 **Run log**:
 ```
 ===========================================================
-MetaClassifier version 1.0.0 (release date: 05 March 2021)
+MetaClassifier version 1.0.1 (release date: 05 March 2021)
 ===========================================================
 
 17:22:40 - Starting MetaClassifier...
