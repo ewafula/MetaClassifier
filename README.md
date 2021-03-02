@@ -58,4 +58,4 @@ Ecosphere 11, no. 4 (2020): e03102.
 DOI: [https://doi.org/10.1002/ecs2.3102](https://doi.org/10.1002/ecs2.3102)
 
 ## License
-MetaClassifier is distributed under the GNU GPL v3.0 For more information, see [license](LICENSE).
+MetaClassifier is distributed under the GNU GPL v3.0 For more information, see [license](https://github.com/ewafula/MetaClassifier/blob/main/LICENSE).
