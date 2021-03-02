@@ -138,6 +138,38 @@ Total elapsed time 708
 
 **Outputs**:
 ```
+sample_input/
+├── merge_dir/
+|           ├── sample1_pear.log
+|           ├── sample1.assembled.fastq
+|           ├── sample1.discarded.fastq
+|           ├── sample1.unassembled.forward.fastq
+|           ├── sample1.unassembled.reverse.fastq
+|           ├── sample2_pear.log
+|           ├── sample2.assembled.fastq
+|           ├── sample2.discarded.fastq
+|           ├── sample2.unassembled.forward.fastq
+|           └── sample2.unassembled.reverse.fastq
+├── fasta_dir/
+|           ├── sample1.fasta
+|           └── sample2.fasta
+├── sample1
+|         ├── ITS1_vsearch.log
+|         ├── ITS1_blast6out.tsv
+|         ├── ITS2_vsearch.log 
+|         ├── ITS2_blast6out.tsv
+|         ├── trnL_vsearch.log
+|         ├── trnL_blast6out.tsv
+|         └── **sample1_rescaled_propotions.tsv**
+├── sample2
+|         ├── ITS1_vsearch.log
+|         ├── ITS1_blast6out.tsv
+|         ├── ITS2_vsearch.log 
+|         ├── ITS2_blast6out.tsv
+|         ├── trnL_vsearch.log
+|         ├── trnL_blast6out.tsv
+|         └── **sample2_rescaled_propotions.tsv**
+└── sample.tsv
 ```
 
 ## Citation
