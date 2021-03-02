@@ -2,7 +2,7 @@
 ## Overview
 MetaClassifier is an integrated pipeline for identifying the floral composition of honey using DNA metabarcoding to determine the plants that honey bees visit. MetaClassifier utilizes a database of marker sequences and their corresponding taxonomy lineage information to classify high-throughput metabarcoding sample sequencing reads data into taxonomic groups and quantify taxon abundance. MetaClassifier can also be employed in other studies that utilize barcoding, metabarcoding, and metagenomics techniques to characterize richness, abundance, relatedness, and interactions in ecological communities.
 
-In addition to this README file, you can consult the MetaClassifier [manual](docs/MetaClassifier.md) for more detailed information.
+In addition to this README file, you can consult the MetaClassifier [manual](https://github.com/ewafula/MetaClassifier/blob/main/docs/MetaClassifier.md) for more detailed information.
 
 ## Installation
 MetaClassifier requires dependencies and external tools that need to be installed and available on the environment the pipeline can be used. Not a requirement if insatalling using Bioconda.
@@ -47,7 +47,7 @@ Detailed step by step tutorial workflow for creating reference marker database i
 metaclassifier [options] <SAMPLE_FILE> <DB_DIR> <CONFIG_FILE>
 ```
 
-Please consult the MetaClassifier [manual](docs/MetaClassifier.md) for a detailed description and usage of all options.
+Please consult the MetaClassifier [manual](https://github.com/ewafula/MetaClassifier/blob/main/docs/MetaClassifier.md) for a detailed description and usage of all options.
 
 ## Citation
 If you use MetaClassifier please cite the following paper the describes the methodology:
