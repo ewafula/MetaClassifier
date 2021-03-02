@@ -86,7 +86,7 @@ Where:
 * `<FASTA_DIR>` is the directory containing samples read data fasta files produced by either the MetaClassifier's `process_reads.py` script or from external sources for classification by the MetaClassifier's `classify_reads.py` script. 
 
 ## MetaClassifier output
-As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sonpsler et al., 2020](#citation) study to show how to perform an complete analysis using wrapper script. The test datasets and [external tools](#external-tools) Linux binaries are located in the [test](../test) and [bin](../bin) sub-directory of MetaClassifier installation respectively. 
+As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sponsler et al., 2020](#citation) study to show how to perform an complete analysis using wrapper script. The test datasets and [external tools](#external-tools) Linux binaries are located in the [test](../test) and [bin](../bin) sub-directory of MetaClassifier installation respectively. 
 
 **Analysis**:
 - Get into the [test](../test) directory of MetaClassifier:
@@ -138,7 +138,7 @@ Total elapsed time 708
 
 **Outputs**:
 
-All of the output will be in the `sample_input` directory, the sample input file name if the desired output name was not provided by the `-o` option. If running the complete pipeline using the `metaclassifier.py` wrapper script as shown above, the contents of this output directory is as follows:
+All of the output will be in the `sample_input/` output directory, named after the sample input file name if an alternative output name was not provided by the `-o` option. If running the complete pipeline using the `metaclassifier.py` wrapper script as shown above, the contents of the output directory is as follows:
 ```
 sample_input/
 ├── merge_dir/
@@ -173,7 +173,12 @@ sample_input/
 |         └── sample2_rescaled_propotions.tsv
 └── sample.tsv
 ```
-Where: 
+Where:  
+* `merge_dir/` is the directory that contains results of the sample paired-end (PE) merging process, including `*_pear.log`: the PEAR merger run logs, `*.assembled.fastq`: the merged overlapping PE reads, `.discarded.fastq`: discared reads, `*..unassembled.forward.fastq`: unmerged forward fragments of PE reads, and `*..unassembled.reverse.fastq`: unmerged reverse fragments of PE reads. 
+* `fasta_dir/` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
+* `/sample1/` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
+* `/sample2/` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
+* `sample.tsv` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/mv sample_input.tsv).
 
 ## Citation
 If you use MetaClassifier please cite the following paper the describes the methodology:
