@@ -179,7 +179,7 @@ Where:
 * **`sample1&2/`** this output sub-directories contains results of the each sample's paired-end reads classification process, including `*_vsearch.log`: the reference marker VSEARCH run logs, `*_blast6out.tsv`: the reference marker VSEARCH search results, and `*_rescaled_propotions.tsv`: the identified sample taxonomic composition and taxon read abundance propotions. 
 * **`sample.tsv`** this a recreated sample input file for merged sample paired-end reads.
 
-## Parameter options
+## Parameters
 
 ### metaclassifier.py
 ```
