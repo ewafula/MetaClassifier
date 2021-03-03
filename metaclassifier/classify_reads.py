@@ -45,8 +45,8 @@ def read_parameters():
      p.add_argument('CONFIG_FILE', type=str, default=None,
                     help="Input tab-delimited file specifying marker name, and its corresponding VSEARCH's\n"
                          "usearch_global function minimum query coverage (i.e. 0.8 for 80%%) and minimun sequence\n"
-                         "identity (i.e. 0.95 for 95%%) for each search marker (provide the file path if not in\n"
-                         "if the VSEARCH settings configuration is not in working directory)\n\n")                      
+                         "identity (i.e. 0.95 for 95%%) for each search marker (provide the full file path of the
+                         "VSEARCH settings configurations if is not in the working directory)\n\n")                      
      p.add_argument('-a', '--vsearch_aligner', type=str, default=VSEARCH,
                     help="Path to VSEARCH, the sequence analysis tool if not in environmental variables (ENV)\n"
                          "(default: read from ENV)\n\n") 
