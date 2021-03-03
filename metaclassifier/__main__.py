@@ -41,7 +41,7 @@ def read_parameters():
                                 formatter_class=argparse.RawTextHelpFormatter)
     p.add_argument('SAMPLE_FILE', type=str, default=None,
                     help="Input tab-delimited file specifying sample names, file names for forward paired-end\n"
-                         "reads, and file names for reverse paired-end (file path if not in working directory)\n"
+                         "reads, and file names for reverse paired-end reads (full file path if not in working directory)\n"
                          "The second file not required for single-end frangments\n\n")
     p.add_argument('DB_DIR', type=str, default=None,
                     help="Input marker database directory with sequence fasta and corresponding taxonomy lineage\n"
@@ -49,8 +49,8 @@ def read_parameters():
     p.add_argument('CONFIG_FILE', type=str, default=None,
                     help="Input tab-delimited file specifying marker name, and its corresponding VSEARCH's\n"
                          "usearch_global function minimum query coverage (i.e. 0.8 for 80%%) and minimun sequence\n"
-                         "identity (i.e. 0.95 for 95%%) for each search marker (provide the file path if not in\n"
-                         "if the VSEARCH settings configuration is not in working directory)\n\n")
+                         "identity (i.e. 0.95 for 95%%) for each search marker (provide the full file path of the\n"
+                         "VSEARCH settings configurations if is not in the working directory)\n\n")
     p.add_argument('-o', '--output_dir', type=str, default=None,
                     help="Specify output directory name, otherwise it will automatically be created using the\n"
                          "input sample table file name\n\n")   
