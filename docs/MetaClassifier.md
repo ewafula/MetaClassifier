@@ -1,11 +1,11 @@
 # MetaClassifier
 ## Overview
-MetaClassifier is an integrated pipeline for identifying the floral composition of honey using DNA metabarcoding to determine the plants that honey bees visit. MetaClassifier utilizes a database of marker sequences and their corresponding taxonomy lineage information to classify high-throughput metabarcoding sample sequencing reads data into taxonomic groups and quantify taxon abundance. MetaClassifier can also be employed in other studies that utilize barcoding, metabarcoding, and metagenomics techniques to characterize richness, abundance, relatedness, and interactions in ecological communities.
+MetaClassifier is an integrated pipeline for identifying the plant taxonomic composition of DNA from pollen baskets or honey, using DNA metabarcoding to determine the source plant species composition. MetaClassifier uses a database of marker sequences and their corresponding taxonomic lineage information to classify high-throughput metabarcoding sequence read data into taxonomic groups and quantify taxon abundance.MetaClassifier can also be employed in other studies that utilize barcoding, metabarcoding, and metagenomics techniques to characterize richness, abundance, relatedness, and interactions in ecological communities.
 
 In addition to this README file, you can consult the MetaClassifier [manual](../docs/MetaClassifier.md) for more detailed information.
 
 ## Installation
-MetaClassifier requires dependencies and external tools that need to be installed and available on the environment the pipeline can be used. Not a requirement if insatalling using Bioconda.
+MetaClassifier requires dependencies and external tools that need to be installed and available on the environment where the pipeline will be used. This is not a requirement if installing MetaClassifier in Bioconda.
 
 ### Dependecies
 
@@ -38,8 +38,7 @@ We recommend installing MetaClassifier in a new separate environment from the ba
 conda create -n "metaclassifier" -c bioconda metaclassifier=1.0.1
 ```
 ## Marker reference databases
-[MetaCurator](https://github.com/RTRichar/MetaCurator) reference databases with taxonomy lineage information reformated to work with MetaClassifier. 
-Detailed step by step tutorial workflow for creating reference marker database is descrribe on the GitHub [MetaCurator database repository](https://github.com/RTRichar/MetabarcodeDBsV2/blob/master/Workflow.md)
+[MetaCurator](https://github.com/RTRichar/MetaCurator) reference databases with taxonomic lineage information reformatted to work with MetaClassifier. Detailed step by step tutorial workflow for creating reference marker database is described on the GitHub [MetaCurator database repository](https://github.com/RTRichar/MetabarcodeDBsV2/blob/master/Workflow.md)
 * [MetabarcodeDBs](http://bigdata.bx.psu.edu/MetaClassifier_databases/)
 
 ## Using MetaClassifier
@@ -80,13 +79,13 @@ Detailed step by step tutorial workflow for creating reference marker database i
     python3 MetaClassifier/metaclassifier/classify_reads.py [options] <FASTA_DIR> <DB_DIR> <CONFIG_FILE>
     ```
 Where:
-* `<SAMPLE_FILE>` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current directory, and the second file is not required for single-end frangments. [Example sample input file is available here](../test/sample_input.tsv).
-* `<DB_DIR>` is the input marker database directory with sequence fasta files and corresponding taxonomy lineage files for each marker. Marker data files should be named with marker nomenclature followed `.fa` for the fasta sequence file and `.tax` for the taxonomy lineage file. (i.e., `ITS1.fa` and `ITS1.tax` for the first internal transcribed spacer in eukaryotic ribosomal RNA subunit genes). The marker taxonomy lineage files should formated as a tab-separated file with 1) the NCBI taxon ID,  2) order name, 3) family name, 4) genus name, and 5) species name as shown in the MetaClassifier's [MetaCurator reformated reference database](http://bigdata.bx.psu.edu/MetaClassifier_databases/).
-* `<CONFIG_FILE>` is the input tab-separated file specifying marker name `(i.e., ITS1)` and its corresponding VSEARCH's usearch_global function search settings of minimum query coverage `(i.e., 0.8 for 80)` and minimum sequence identity `(i.e., 0.95 for 95%)` for each search marker. [Example sample input file is available here](../test/sample_config.tsv).
+* `<SAMPLE_FILE>` is the input tab-separated file specifying 1) sample names, 2) file names for forward paired-end reads, and 3) file names for reverse paired-end reads. The full file path is required if the files are not in the current working directory, and the second file is not required for single-end fragments. [Example sample input file is available here](../test/sample_input.tsv).
+* `<DB_DIR>` is the input marker database directory with sequence FASTA files and corresponding taxonomic lineage files for each marker. Marker data files should be named with marker nomenclature followed by `.fa` for the FASTA sequence file and `.tax` for the taxonomic lineage file. (i.e., ITS1.fa and ITS1.tax for the first internal transcribed spacer in eukaryotic ribosomal RNA subunit genes). The marker taxonomic lineage files should be formatted as a tab-separated files with: 1) the NCBI taxon ID, 2) order name, 3) family name, 4) genus name, and 5) species name as shown in the MetaClassifier's [MetaCurator reformatted reference database](http://bigdata.bx.psu.edu/MetaClassifier_databases/).
+* `<CONFIG_FILE>` is the input tab-separated file specifying marker name `(i.e., ITS1)` and its corresponding VSEARCH's usarch global function search settings of minimum query coverage `(i.e., 0.8 for 80)` and minimum sequence identity `(i.e., 0.95 for 95%)` for each search marker. [Example sample input file is available here](../test/sample_config.tsv).
 * `<FASTA_DIR>` is the directory containing sample read data FASTA produced by either the MetaClassifier's `process_reads.py` script or from an external source for classification by the MetaClassifier's `classify_reads.py` script. 
 
 ## MetaClassifier output
-As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sponsler et al., 2020](#citation) study to show how to perform an complete analysis using wrapper script. The test datasets and [external tools](#external-tools) Linux binaries are located in the [test](../test) and [bin](../bin) sub-directory of MetaClassifier installation respectively. 
+As an example, this section uses the a small test dataset subsampled from the sample read data that was utilized in the [Sponsler et al., 2020](#citation) study to show how to perform an complete analysis using the MetaClassifier wrapper script. The test datasets and [external tools](#external-tools) Linux binaries are located in the [test](../test) and [bin](../bin) sub-directory of MetaClassifier installation respectively. 
 
 **Analysis**:
 - Get into the [test](../test) directory of MetaClassifier:
@@ -97,7 +96,7 @@ As an example, this section uses the a small test dataset subsampled from the sa
   - `wget -qO- http://bigdata.bx.psu.edu/MetaClassifier_databases/MetabarcodeDBsV2.tar.gz | tar -xvz -C ../db/`
 - Change persmissions to make [external tools](#external-tools) Linux binaries in the [bin](../bin) directory executable:
   - `chmod u+x ../bin/*`
-- Execute the `metaclassifier.py` wrapper script with defaults for optional arguments and allowing PE reads merging:
+- Execute the `metaclassifier.py` wrapper script with defaults for optional arguments and allowing paired-end merging:
   - `python ../metaclassifier.py -m -r ../bin/pear -s ../bin/seqtk -a ../bin/vsearch sample_input.tsv ../db/MetabarcodeDBsV2 sample_config.tsv`
 
 **Run log**:
@@ -177,9 +176,9 @@ sample_input/
 ```
 Where:  
 * **`merge_dir/`**: this output sub-directory contains results of the sample paired-end (PE) read merging process, including `*_pear.log`: the PEAR merger run logs, `*.assembled.fastq`: the merged overlapping PE reads, `*.discarded.fastq`: discarded erroneous reads, `*.unassembled.forward.fastq`: unmerged forward fragments of PE reads, and `*.unassembled.reverse.fastq`: unmerged reverse fragments of PE reads. 
-* **`fasta_dir/`**: this output sub-directory contains the merged overlapping paired-end reads sample FASTA converted from FASTQ format. This out directory be used as an input of the `classify_reads.py` script for reruns to optimize classification parameters.
+* **`fasta_dir/`**: this output sub-directory contains the merged overlapping paired-end reads sample FASTA converted from FASTQ format. This out directory can be used as an input of the `classify_reads.py` script for reruns to optimize classification parameters.
 * **`sample1&2/`** this output sub-directories contains results of the each sample's paired-end reads classification process, including `*_vsearch.log`: the reference marker VSEARCH run logs, `*_blast6out.tsv`: the reference marker VSEARCH search results, and `*_rescaled_propotions.tsv`: the identified sample taxonomic composition and taxon read abundance propotions. 
-* **`sample.tsv`** this a recreated sample input file for merged sample paired-end reads.
+* **`sample.tsv`** this is a recreated sample input file for merged sample paired-end reads.
 
 ## Parameters
 
@@ -197,7 +196,7 @@ corresponding taxonomy classes to identify and quantify the floral composition o
 
 positional arguments:
   SAMPLE_FILE           Input tab-delimited file specifying sample names, file names for forward paired-end
-                        reads, and file names for reverse paired-end (file path if not in working directory)
+                        reads, and file names for reverse paired-end reads (full file path if not in working directory)
                         The second file not required for single-end frangments
                         
   DB_DIR                Input marker database directory with sequence fasta and corresponding taxonomy lineage
@@ -205,8 +204,8 @@ positional arguments:
                         
   CONFIG_FILE           Input tab-delimited file specifying marker name, and its corresponding VSEARCH's
                         usearch_global function minimum query coverage (i.e. 0.8 for 80%) and minimun sequence
-                        identity (i.e. 0.95 for 95%) for each search marker (provide the file path if not in
-                        if the VSEARCH settings configuration is not in working directory)
+                        identity (i.e. 0.95 for 95%) for each search marker (provide the full file path of the
+                        VSEARCH settings configurations if is not in the working directory)
                         
 
 optional arguments:
@@ -262,7 +261,7 @@ shorter than two times the read length, and converts fastq to fasta format
 
 positional arguments:
   SAMPLE_FILE           Input tab-delimited file specifying sample names, file names for forward paired-end
-                        reads, and file names for reverse paired-end (file path if not in working directory)
+                        reads, and file names for reverse paired-end reads (full file path if not in working directory)
                         The second file not required for single-end frangments
                         
 
@@ -312,8 +311,8 @@ positional arguments:
                         
   CONFIG_FILE           Input tab-delimited file specifying marker name, and its corresponding VSEARCH's
                         usearch_global function minimum query coverage (i.e. 0.8 for 80%) and minimun sequence
-                        identity (i.e. 0.95 for 95%) for each search marker (provide the file path if not in
-                        if the VSEARCH settings configuration is not in working directory)
+                        identity (i.e. 0.95 for 95%) for each search marker (provide the full file path of the
+                        VSEARCH settings configurations if is not in the working directory)
                         
 
 optional arguments:
@@ -339,7 +338,7 @@ optional arguments:
 ```
 
 ## Citation
-If you use MetaClassifier please cite the following paper the describes the methodology:
+If you use MetaClassifier please cite the following paper that describes the methodology:
 
 **Characterizing the floral resources of a North American metropolis using a honey bee foraging assay.**  
 _Douglas B. Sponsler_, _Don Shump_,  _Rodney T. Richardson_,  _Christina M. Grozinger_.  
@@ -347,5 +346,5 @@ Ecosphere 11, no. 4 (2020): e03102.
 DOI: [https://doi.org/10.1002/ecs2.3102](https://doi.org/10.1002/ecs2.3102)
 
 ## License
-MetaClassifier is distributed under the GNU GPL v3.0 For more information, see [license](../LICENSE).
+MetaClassifier is distributed under the GNU GPL v3.0 - for more information, see [license](../LICENSE).
 
