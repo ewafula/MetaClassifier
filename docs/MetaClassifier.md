@@ -18,7 +18,7 @@ MetaClassifier requires dependencies and external tools that need to be installe
 * [VSEARCH](https://github.com/torognes/vsearch/) for searching searching high-throughtput sequence read data against marker database
 
 ### Python package installation
-MetaClassifier is available through [pypi](https://pypi.python.org/pypi/metaclassifier). To install, type:
+MetaClassifier is available through [pypi](https://pypi.org/project/metaclassifier/). To install, type:
 ```
 pip install metaclassifier
 ```
