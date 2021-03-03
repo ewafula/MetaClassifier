@@ -29,7 +29,7 @@ cd MetaClassifier/
 python setup.py install
 ```
 ### Bioconda package
-This requires a working [Conda](https://docs.conda.io/en/latest/miniconda.html#) installation. Also available on the [MetaClassifier's Bioconda recipe webpage](https://bioconda.github.io/recipes/metaclassifier/README.html?highlight=metaclassifier#link-to-this-page) is a MetaClassifier docker container that can be pulled and used for analysis.   
+This requires a working [Conda](https://docs.conda.io/en/latest/miniconda.html#) installation. A MetaClassifier docker container is also available on the [Bioconda](https://bioconda.github.io/recipes/metaclassifier/README.html?highlight=metaclassifier#link-to-this-page).  
 ```
 conda install -c bioconda metaclassifier
 ```
