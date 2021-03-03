@@ -262,7 +262,7 @@ shorter than two times the read length, and converts fastq to fasta format
 positional arguments:
   SAMPLE_FILE           Input tab-delimited file specifying sample names, file names for forward paired-end
                         reads, and file names for reverse paired-end reads (full file path if not in working directory)
-                        The second file not required for single-end frangments
+                        The second file not required for single-end fragments
                         
 
 optional arguments:
