@@ -36,7 +36,7 @@ def read_parameters():
                                 formatter_class=argparse.RawTextHelpFormatter)
     p.add_argument('SAMPLE_FILE', type=str, default=None,
                     help="Input tab-delimited file specifying sample names, file names for forward paired-end\n"
-                         "reads, and file names for reverse paired-end (file path if not in working directory)\n"
+                         "reads, and file names for reverse paired-end (full file path if not in working directory)\n"
                          "The second file not required for single-end frangments\n\n")
     p.add_argument('-o', '--output_dir', type=str, default=None,
                     help="Specify output directory name, otherwise it will automatically be created using the\n"
